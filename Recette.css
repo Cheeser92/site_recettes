@@ -21,9 +21,8 @@ p.categorie {
 
 div.contenu {
     background-color: white;
-    margin: 60px 10% 80px 10%;
-    padding: 0 30px 30px 30px;
-    min-width: 350px;
+    margin: 40px 8px 40px 8px;
+    padding: 0 8px 20px 8px;
     box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
@@ -33,6 +32,7 @@ h1 {
     margin-bottom: 10px;
     margin-top: 15px;
 }
+
 p.description {
     /*text-align: center;*/
     max-width: 400px; /* Permet de spécifier une largeur maximal que le texte doit occuper */
@@ -40,15 +40,18 @@ p.description {
     /* la commande display permet d'indiquer si le texte doit prendre tout le block. Elle prend principallement trois argulents : block (par défaut, il prend toute la ligne), inline (il ne prend que la place nécessaire) et inline-block (c'est le mode inline mais avec plus de possibilité de contrôle) */ 
     font-size: 15px;
 }
+
 .centre {
     text-align: center;
     width: 100%;
 }
+
 div.categorie {
     margin-bottom: 0px;
     margin-top: 0px;
     overflow: visible;
 }
+
 div.separateur {
     background-color: black;
     width: 150px;
@@ -56,6 +59,7 @@ div.separateur {
     margin-left: auto; /* en mettant margin left et right en auto il équilibre le positionnement du sépérateur */
     margin-right: auto;
 }
+
 table.info {
     position: absolute;
     bottom: 0;
@@ -64,18 +68,21 @@ table.info {
     background-color: #6C829DC0;
     padding-top: 5px;
     padding-bottom: 5px;
-    height: 70px;"
+    height: 50px;"
 }
+
 table.info td {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     vertical-align: top;
 }
+
 table.info th {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
 }
+
 div.info {
     position: relative
 }
@@ -89,14 +96,12 @@ img.info {
 }
 
 div.Ingredients {
-    display: inline-block;
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 
 div.recette {
-    float: right;
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -143,3 +148,46 @@ table.table_recette tr {
     height: 40px;
 }
 
+/* Style pour ordinateur */
+@media only screen and (min-width: 768px){
+
+    div.contenu {
+        min-width: 350px;
+        margin: 60px 10% 80px 10%;
+        padding: 0 30px 30px 30px;
+    }
+
+    table.info {
+        height: 70px;"
+    }
+
+    table.info td {
+        font-size: 13px;
+    }
+
+    table.info th {
+        font-size: 16px;
+    }
+
+    div.Ingredients {
+        display: inline-block;
+        width: 45%;
+    }
+    
+    div.recette {
+        float: right;
+        width: 45%;
+    }
+
+}
+
+/* Style pour les écrans très grand */
+@media only screen and (min-width: 950px) {
+
+    div.contenu {
+        margin-left:auto;
+        margin-right:auto;
+        width:645px;
+    }
+
+}
